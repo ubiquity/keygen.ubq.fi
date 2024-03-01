@@ -5,7 +5,7 @@ const config: KnipConfig = {
   project: ["src/**/*.ts"],
   ignore: ["src/types/config.ts"],
   ignoreExportsUsedInFile: true,
-  ignoreDependencies: [],
+  ignoreDependencies: ["libsodium-wrappers", "eslint-config-prettier", "eslint-plugin-prettier"],
 };
 
 export default config;
