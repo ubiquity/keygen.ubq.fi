@@ -1,16 +1,19 @@
 name: Knip
 
 on:
-  pull_request:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
 
-permissions: write-all
+permissions:
+  checks: write
+  issues: write
 
 jobs:
   run-knip:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
