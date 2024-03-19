@@ -2,9 +2,10 @@ name: Knip
 
 on:
   pull_request:
-  workflow_dispatch:
 
-permissions: write-all
+permissions:
+  checks: write
+  issues: write
 
 jobs:
   run-knip:
