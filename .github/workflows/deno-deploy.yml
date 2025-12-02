@@ -14,10 +14,10 @@ jobs:
       preview_project: keygen-ubq-fi-preview
       entrypoint: serve.ts
       install_command: |
-        bun install
+        yarn install --frozen-lockfile
       build_command: |
-        bun run build/esbuild-build.ts
-      bun_version: "1.1.x"
+        yarn build
+      node_version: "20.10.0"
       deno_version: 2.x
       deployctl_version: "1.12.0"
       prod_branch: development
