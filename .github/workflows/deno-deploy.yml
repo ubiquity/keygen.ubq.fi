@@ -32,8 +32,8 @@ jobs:
         shell: bash
         env:
           FRONTEND_URL: https://keygen.ubq.fi
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || vars.SUPABASE_ANON_KEY || '' }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL || vars.SUPABASE_URL || '' }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         run: |
           set -euo pipefail
 
