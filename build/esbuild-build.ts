@@ -1,5 +1,9 @@
-// @ts-expect-error - Could not find a declaration file for module
 import esbuild from "esbuild";
+import { createRequire } from "node:module";
+
+const require = createRequire(`${process.cwd()}/package.json`);
+const libsodiumWrappersPath = require.resolve("libsodium-wrappers");
+
 const typescriptEntries = ["static/scripts/key-generator/keygen.ts"];
 const cssEntries = ["static/styles/rewards/rewards.css", "static/styles/audit-report/audit.css", "static/styles/onboarding/onboarding.css"];
 export const entries = [...typescriptEntries, ...cssEntries];
@@ -17,6 +21,14 @@ export const esBuildContext: esbuild.BuildOptions = {
     ".ttf": "dataurl",
     ".svg": "dataurl",
   },
+  plugins: [
+    {
+      name: "libsodium-wrappers-cjs",
+      setup(build) {
+        build.onResolve({ filter: /^libsodium-wrappers$/ }, () => ({ path: libsodiumWrappersPath }));
+      },
+    },
+  ],
   outdir: "static/out",
 };
 
