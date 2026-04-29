@@ -21,6 +21,10 @@
     "dataurl",
     "outdir",
     "servedir",
+    "denoland",
+    "SUPABASE",
+    "pipefail",
+    "binfmt"
   ],
   "dictionaries": ["typescript", "node", "software-terms", "html"],
   "import": ["@cspell/dict-typescript/cspell-ext.json", "@cspell/dict-node/cspell-ext.json", "@cspell/dict-software-terms"],
