@@ -22,3 +22,9 @@
 
 7. **Double Check**
    - Ensure that you've updated the GitHub Actions secret field `x25519_PRIVATE_KEY` with your already generated x25519 private key. This double check ensures that all components are aligned and your system remains secure.
+
+## Hosting (2026-10-12)
+
+Served by the Cloudflare Workers static-assets worker `keygen-ubq-fi`
+(`wrangler.toml`), routed at `keygen.ubq.fi/*` with single-page fallback.
+Deno Deploy is no longer used (shutdown April 2027).
