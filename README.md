@@ -26,5 +26,5 @@
 ## Hosting (2026-10-12)
 
 Served by the Cloudflare Workers static-assets worker `keygen-ubq-fi`
-(`wrangler.toml`), routed at `keygen.ubq.fi/*` with single-page fallback.
+(`wrangler.toml`), bound to the `keygen.ubq.fi` custom domain with single-page fallback.
 Deno Deploy is no longer used (shutdown April 2027).
