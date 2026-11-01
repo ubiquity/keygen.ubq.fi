@@ -1,6 +1,7 @@
 name = "keygen-ubq-fi"
 compatibility_date = "2024-10-01"
 account_id = "5c0228bee348f4cf48829ffe21b61fe9"
+routes = [{ pattern = "keygen.ubq.fi", custom_domain = true }]
 
 [assets]
 directory = "./static"
